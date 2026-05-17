@@ -51,7 +51,24 @@
 
     update();
   }
-
+  /* ----- Buy page: read plan from URL ----- */
+  const planNameEl = document.querySelector('.order-line span:first-child');
+  const planPriceEl = document.querySelector('.order-line span:last-child');
+  const totalEl = document.querySelector('.order-total span:last-child');
+  if (planNameEl && planPriceEl && totalEl) {
+    const params = new URLSearchParams(window.location.search);
+    const plan = params.get('plan');
+    const plans = {
+      monthly:  { name: 'Frei',   price: '€0.00' },
+      annual:   { name: 'Monatlich',    price: '€9.99' },
+      lifetime: { name: 'Jährlich',  price: '€99.00' }
+    };
+    if (plans[plan]) {
+      planNameEl.textContent = plans[plan].name;
+      planPriceEl.textContent = plans[plan].price;
+      totalEl.textContent = plans[plan].price;
+    }
+  }
   /* ----- Buy form mock submission ----- */
   const buyForm = document.getElementById('buy-form');
   if (buyForm) {
@@ -75,6 +92,18 @@
         localStorage.setItem('linguora-cookie-choice', choice);
         banner.hidden = true;
       }
+    });
+  }
+  /* ----- Contact form mock submission ----- */
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!contactForm.checkValidity()) return contactForm.reportValidity();
+      document.querySelector('.contact-grid').hidden = true;
+      const success = document.getElementById('contact-success');
+      success.hidden = false;
+      success.focus();
     });
   }
 })();
