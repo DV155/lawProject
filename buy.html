@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaufen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">[Skip to main content]</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="linguora home">
+        <div class="logo-slot" aria-hidden="true">
+          <img src="assets/linguoraLogo.png" alt="">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">linguora</span>
+          <span class="brand-tagline">KEINE SPRACHE UNBEWAHRT</span>
+        </div>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="index.html">LINGUORA</a>
+        <a href="product.html">ANGEBOTE</a>
+        <a href="about.html">ÜBER UNS</a>
+        <a href="buy.html">KAUFEN</a>
+        <a href="contant.html">KONTAKT</a>
+      </nav>
+    </div>
+  </header>
+    <!-- ============ MAIN ============ -->
+  <main id="main">
+    <section class="container buy-container" aria-labelledby="buy-heading">
+      <h1 id="buy-heading">[Buy page heading]</h1>
+
+      <div class="buy-layout">
+
+        <!-- Form -->
+        <form id="buy-form" class="buy-form" novalidate>
+
+          <fieldset>
+            <legend>[Personal info heading]</legend>
+
+            <div class="form-group">
+              <label for="name">[Name]</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">[Email]</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>[Payment heading]</legend>
+
+            <div class="form-group">
+              <label for="cardnumber">[Card number]</label>
+              <input type="text" id="cardnumber" name="cardnumber" required inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="expiry">[Expiry MM/YY]</label>
+                <input type="text" id="expiry" name="expiry" required autocomplete="cc-exp" placeholder="MM/JJ">
+              </div>
+              <div class="form-group">
+                <label for="cvv">[CVV]</label>
+                <input type="text" id="cvv" name="cvv" required inputmode="numeric" autocomplete="cc-csc">
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">[I accept the <a href="license.html">license terms</a>]</label>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <label for="privacy">[I have read the <a href="privacy.html">privacy policy</a>]</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary buy-submit">[Buy now]</button>
+        </form>
+
+        <!-- Order summary -->
+        <aside class="order-summary" aria-labelledby="order-heading">
+          <h2 id="order-heading">[Order summary]</h2>
+
+          <div class="order-line">
+            <span>[Plan name — e.g. Annual]</span>
+            <span>[€49,00]</span>
+          </div>
+
+          <div class="order-total">
+            <span>[Total]</span>
+            <span>[€49,00]</span>
+          </div>
+        </aside>
+
+      </div>
+
+      <!-- Success state (revealed after submit) -->
+      <div id="buy-success" class="buy-success" role="status" aria-live="polite" tabindex="-1" hidden>
+        <h2>[Thank you heading]</h2>
+        <p>[Confirmation message — e.g. order details sent to email]</p>
+        <a href="index.html" class="btn btn-secondary">[Return home]</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <span class="brand-name">linguora</span>
+        <p class="footer-tagline">KEINE SPRACHE UNBEWAHRT</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col">
+          <h4>[Product]</h4>
+          <a href="product.html">[Funktionen]</a>
+          <a href="buy.html">[Preise]</a>
+          <a href="product.html">[Sprachen]</a>
+        </div>
+        <div class="footer-col">
+          <h4>[Company]</h4>
+          <a href="about.html">[Über uns]</a>
+          <a href="contant.html">[Kontakt]</a>
+          <a href="imprint.html">[Imprint]</a>
+        </div>
+        <div class="footer-col">
+          <h4>[Legal]</h4>
+          <a href="privacy.html">[Datenschutz]</a>
+          <a href="license.html">[Lizenz]</a>
+          <a href="access.html">[Barrierefreiheit]</a>
+          <a href="credits.html">[Urheberrecht]</a>
+        </div>
+      </nav>
+
+      <div class="footer-meta">
+        <p>[© 2026 Linguora GmbH — All rights reserved]</p>
+        <p class="footer-address">[Wien, Österreich]</p>
+      </div>
+
+    </div>
+  </footer>
+
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" hidden>
+  <div class="cookie-content">
+    <p id="cookie-title">Diese Website nutzt Cookies und ähnliche Technologien, um Ihre Nutzung zu verarbeiten und anonym auszuwerten, sowie unsere Website funktionsfähig zu halten. Weitere Information können Sie in unserer <a href="privacy.html">Datenschutzerklärung</a> finden.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-secondary" data-cookie="reject">Ablehnen</button>
+      <button class="btn btn-primary" data-cookie="accept">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
